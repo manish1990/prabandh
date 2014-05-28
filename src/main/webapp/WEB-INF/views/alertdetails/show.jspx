@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_taskmanager_domain_AlertDetail" object="${alertdetail}" path="/alertdetails" z="ZO/FGjRITOktZr89Hw5oBPyz/wU=">
+        <field:display field="alertTopic" id="s_com_taskmanager_domain_AlertDetail_alertTopic" object="${alertdetail}" z="Kkr3gbieDCkdYJ0xBVIbSagVqnk="/>
+        <field:display field="alertTo" id="s_com_taskmanager_domain_AlertDetail_alertTo" object="${alertdetail}" z="8N/YeuToYe5yjIE6fYLd5kWYsCs="/>
+        <field:display field="alertBy" id="s_com_taskmanager_domain_AlertDetail_alertBy" object="${alertdetail}" z="sE4CF8pPCRnpOFpyMmWWOYNwwLI="/>
+        <field:display field="alertMessage" id="s_com_taskmanager_domain_AlertDetail_alertMessage" object="${alertdetail}" z="jwu/V7YdWVN9Uf33HOh1+9VBbRM="/>
+        <field:display date="true" dateTimePattern="${alertDetail_sendingdate_date_format}" field="sendingDate" id="s_com_taskmanager_domain_AlertDetail_sendingDate" object="${alertdetail}" z="8dsyqgjpRWVVwLof4uiQeSrUN0E="/>
+        <field:display field="msgStatus" id="s_com_taskmanager_domain_AlertDetail_msgStatus" object="${alertdetail}" z="+AT6ZVj/IBspoYzdq/wVoNRINic="/>
+    </page:show>
+</div>

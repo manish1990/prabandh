@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByEmailIdEqualsAndVerifiedNot" id="ff_com_taskmanager_domain_UserDetail" path="/userdetails" z="6O1mays/Q84noyE5fWze3Kl54IU=">
+        <field:input disableFormBinding="true" field="emailId" id="f_com_taskmanager_domain_UserDetail_emailId" required="true" validationMessageCode="field_invalid_email" z="3WBht0DSE86tEG1qUgfm6wdjm1A="/>
+        <field:checkbox disableFormBinding="true" field="verified" id="f_com_taskmanager_domain_UserDetail_verified" z="WSgy9hfvE+dOsjnWQ1gVWbG09kY="/>
+    </form:find>
+</div>

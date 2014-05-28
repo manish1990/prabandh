@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="alertdetails/list">
+        <put-attribute name="body" value="/WEB-INF/views/alertdetails/list.jspx"/>
+    </definition>
+<definition extends="default" name="alertdetails/show">
+        <put-attribute name="body" value="/WEB-INF/views/alertdetails/show.jspx"/>
+    </definition>
+<definition extends="default" name="alertdetails/create">
+        <put-attribute name="body" value="/WEB-INF/views/alertdetails/create.jspx"/>
+    </definition>
+<definition extends="default" name="alertdetails/update">
+        <put-attribute name="body" value="/WEB-INF/views/alertdetails/update.jspx"/>
+    </definition>
+<definition extends="default" name="alertdetails/findAlertDetailsBySendingDateNotEquals">
+        <put-attribute name="body" value="/WEB-INF/views/alertdetails/findAlertDetailsBySendingDateNotEquals.jspx"/>
+    </definition>
+<definition extends="default" name="alertdetails/findAlertDetailsByAlertTo">
+        <put-attribute name="body" value="/WEB-INF/views/alertdetails/findAlertDetailsByAlertTo.jspx"/>
+    </definition>
+<definition extends="default" name="alertdetails/findAlertDetailsByMsgStatusNot">
+        <put-attribute name="body" value="/WEB-INF/views/alertdetails/findAlertDetailsByMsgStatusNot.jspx"/>
+    </definition>
+<definition extends="default" name="alertdetails/findAlertDetailsByAlertToAndMsgStatusNot">
+        <put-attribute name="body" value="/WEB-INF/views/alertdetails/findAlertDetailsByAlertToAndMsgStatusNot.jspx"/>
+    </definition>
+</tiles-definitions>

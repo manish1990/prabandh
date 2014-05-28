@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="taskdetails/list">
+        <put-attribute name="body" value="/WEB-INF/views/taskdetails/list.jspx"/>
+    </definition>
+<definition extends="default" name="taskdetails/show">
+        <put-attribute name="body" value="/WEB-INF/views/taskdetails/show.jspx"/>
+    </definition>
+<definition extends="default" name="taskdetails/create">
+        <put-attribute name="body" value="/WEB-INF/views/taskdetails/create.jspx"/>
+    </definition>
+<definition extends="default" name="taskdetails/update">
+        <put-attribute name="body" value="/WEB-INF/views/taskdetails/update.jspx"/>
+    </definition>
+<definition extends="default" name="taskdetails/findTaskDetailsByAssignBy">
+        <put-attribute name="body" value="/WEB-INF/views/taskdetails/findTaskDetailsByAssignBy.jspx"/>
+    </definition>
+<definition extends="default" name="taskdetails/findTaskDetailsByAssignTo">
+        <put-attribute name="body" value="/WEB-INF/views/taskdetails/findTaskDetailsByAssignTo.jspx"/>
+    </definition>
+<definition extends="default" name="taskdetails/findTaskDetailsByRootTaskId">
+        <put-attribute name="body" value="/WEB-INF/views/taskdetails/findTaskDetailsByRootTaskId.jspx"/>
+    </definition>
+</tiles-definitions>

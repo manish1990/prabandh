@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_userdetail" z="1+Mtg8OC9wxeZgnS88lel0ieQAQ=">
+            <menu:item id="i_userdetail_new" messageCode="global_menu_new" url="/userdetails?form" z="l/LPwR63U0oBMu0QsHgZidGG4gY="/>
+            <menu:item id="i_userdetail_list" messageCode="global_menu_list" url="/userdetails?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kiC9QvybYKI9fFe/6TRaemXeyz8="/>
+            <menu:item id="fi_userdetail_emailidequals" messageCode="global_menu_find" url="/userdetails?find=ByEmailIdEquals&amp;form" z="XHxArvzzhNcoWO92PmPmrzrfId8="/>
+            <menu:item id="fi_userdetail_emailidequalsandpasswordequals" messageCode="global_menu_find" url="/userdetails?find=ByEmailIdEqualsAndPasswordEquals&amp;form" z="tVtZJcgqCEXxmfDykn+mi2z/Fco="/>
+            <menu:item id="fi_userdetail_emailidequalsandrolenamenotequalsandverifiednotandenablednot" messageCode="global_menu_find" url="/userdetails?find=ByEmailIdEqualsAndRoleNameNotEqualsAndVerifiedNotAndEnabledNot&amp;form" z="AS+bFi+AcEOfx8IGWE2gF/14Zgo="/>
+            <menu:item id="fi_userdetail_emailidequalsandverifiednot" messageCode="global_menu_find" url="/userdetails?find=ByEmailIdEqualsAndVerifiedNot&amp;form" z="MuOIGpUlwl5Z8Aa/lUkJgWkHO4Y="/>
+            <menu:item id="fi_userdetail_emailidnotequals" messageCode="global_menu_find" url="/userdetails?find=ByEmailIdNotEquals&amp;form" z="rPwDD4OkTTE6ebcr6YzLpEEbQxk="/>
+            <menu:item id="fi_userdetail_emailidnotequalsandrolenamenotequals" messageCode="global_menu_find" url="/userdetails?find=ByEmailIdNotEqualsAndRoleNameNotEquals&amp;form" z="NJtL82uJXkQ54V6EMAgTo4MYT+M="/>
+            <menu:item id="fi_userdetail_emailidnotequalsandverifiednotandenablednotandrolenamenotequals" messageCode="global_menu_find" url="/userdetails?find=ByEmailIdNotEqualsAndVerifiedNotAndEnabledNotAndRoleNameNotEquals&amp;form" z="gSXuopPy1dnQ8Zwy0MZpWhRQJRU="/>
+            <menu:item id="fi_userdetail_enablednotandverifiednot" messageCode="global_menu_find" url="/userdetails?find=ByEnabledNotAndVerifiedNot&amp;form" z="ZRddiRIeJpxT9wnA4AQ0yRAOSlU="/>
+            <menu:item id="fi_userdetail_verificationcodeequals" messageCode="global_menu_find" url="/userdetails?find=ByVerificationCodeEquals&amp;form" z="c9LimJM1WmdZu1sxs1HXcHGbb44="/>
+        </menu:category>
+        <menu:category id="c_taskdetail" z="NT2dpUPX9uR05nu+Tcwc2sDIwmE=">
+            <menu:item id="i_taskdetail_new" messageCode="global_menu_new" url="/taskdetails?form" z="7enjr5KJwYXbdxXTi1Bf5DqA7zI="/>
+            <menu:item id="i_taskdetail_list" messageCode="global_menu_list" url="/taskdetails?page=1&amp;size=${empty param.size ? 10 : param.size}" z="zV2x+hUINz06m6QzLqCNRPzXVYM="/>
+            <menu:item id="fi_taskdetail_assignby" messageCode="global_menu_find" url="/taskdetails?find=ByAssignBy&amp;form" z="qaOtKtFKb21H9kj4owz0qJcJQyA="/>
+            <menu:item id="fi_taskdetail_assignto" messageCode="global_menu_find" url="/taskdetails?find=ByAssignTo&amp;form" z="j/UdVVnpogDxCOaxvX5bUrVVgvc="/>
+            <menu:item id="fi_taskdetail_roottaskid" messageCode="global_menu_find" url="/taskdetails?find=ByRootTaskId&amp;form" z="ZTDPsFRZdsJArAkKXktd0/JCL4E="/>
+        </menu:category>
+        <menu:category id="c_alertdetail" z="CDL5iXg8SOndEW1dbpTEAbtb/7w=">
+            <menu:item id="i_alertdetail_new" messageCode="global_menu_new" url="/alertdetails?form" z="Dw3OlcAVEsA14/deCeuB0Q7wXiQ="/>
+            <menu:item id="i_alertdetail_list" messageCode="global_menu_list" url="/alertdetails?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kKsTEV8zuHMqu6X0iUNX4Jx2JoA="/>
+            <menu:item id="fi_alertdetail_alertto" messageCode="global_menu_find" url="/alertdetails?find=ByAlertTo&amp;form" z="AiwpiMB9lvw5730qnY1RGWY+wmM="/>
+            <menu:item id="fi_alertdetail_alerttoandmsgstatusnot" messageCode="global_menu_find" url="/alertdetails?find=ByAlertToAndMsgStatusNot&amp;form" z="J3Za2e5LkGmgw/gZlkkKNOG8Wv0="/>
+            <menu:item id="fi_alertdetail_msgstatusnot" messageCode="global_menu_find" url="/alertdetails?find=ByMsgStatusNot&amp;form" z="m+C8+B5IWCABTTXOWnzzAjMshDc="/>
+            <menu:item id="fi_alertdetail_sendingdatenotequals" messageCode="global_menu_find" url="/alertdetails?find=BySendingDateNotEquals&amp;form" z="tW+xFd6jAnCYReWATOvKot5sqo4="/>
+        </menu:category>
+        <menu:category id="c_projectdetail" z="Nlj85d015vLHfu4AP3HHAQQnjlg=">
+            <menu:item id="i_projectdetail_new" messageCode="global_menu_new" url="/projectdetails?form" z="I/HeEeDwGGHbuCALXzrR6JtXtSA="/>
+            <menu:item id="i_projectdetail_list" messageCode="global_menu_list" url="/projectdetails?page=1&amp;size=${empty param.size ? 10 : param.size}" z="8hpbG9HA5+WNOn9GcqZAel4vjXE="/>
+        </menu:category>
+    </menu:menu>
+</div>

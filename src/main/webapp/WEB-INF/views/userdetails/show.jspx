@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_taskmanager_domain_UserDetail" object="${userdetail}" path="/userdetails" z="0A2Sf5A278NEbixQ276TH+Wu2Dw=">
+        <field:display field="firstName" id="s_com_taskmanager_domain_UserDetail_firstName" object="${userdetail}" z="McjhcRDISX00cfXeZ7BKqzB2q7U="/>
+        <field:display field="lastName" id="s_com_taskmanager_domain_UserDetail_lastName" object="${userdetail}" z="xoK7K4CMI85z7yB6W57hr6kwYlg="/>
+        <field:display field="verificationCode" id="s_com_taskmanager_domain_UserDetail_verificationCode" object="${userdetail}" z="6z7g/2tNmBmBG5jqBKmrDLHtbwE="/>
+        <field:display field="contactNumber" id="s_com_taskmanager_domain_UserDetail_contactNumber" object="${userdetail}" z="ZMW0YN7nXjywK691blhKyfo8Ixw="/>
+        <field:display field="enabled" id="s_com_taskmanager_domain_UserDetail_enabled" object="${userdetail}" z="oxYILq/4y2l7k3DhpNDi74STyHY="/>
+        <field:display field="verified" id="s_com_taskmanager_domain_UserDetail_verified" object="${userdetail}" z="Ujp5G8/DCPuHAVGd2mP5cmXeWE0="/>
+        <field:display field="password" id="s_com_taskmanager_domain_UserDetail_password" object="${userdetail}" z="1Hs8XVAdpYv5yYqiL4am7rulvMM="/>
+        <field:display field="emailId" id="s_com_taskmanager_domain_UserDetail_emailId" object="${userdetail}" z="HLYROmeyahKYZmZfEXvu2Ir1aB4="/>
+        <field:display field="roleName" id="s_com_taskmanager_domain_UserDetail_roleName" object="${userdetail}" z="y5i1zEyKw7PjsYqOARf1rwriktc="/>
+        <field:display field="city" id="s_com_taskmanager_domain_UserDetail_city" object="${userdetail}" z="pNvRMfTWMTmsHM+KzlfvM/SGCik="/>
+    </page:show>
+</div>

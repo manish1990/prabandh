@@ -1,0 +1,227 @@
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-04-26 00:03:59
+project --topLevelPackage com.taskmanager 
+jpa setup --provider HIBERNATE --database MYSQL --databaseName taskmanagerdb --userName root --password test
+entity jpa --class com.taskmanager.domain.UserDetail --testAutomatically 
+field string --fieldName firstName
+entity jpa --class com.taskmanager.domain.UserDetail --testAutomatically 
+field string --fieldName firstName --notNull 1
+field string --fieldName lastName --notNull 1
+field string --fieldName emailId --notNull 1
+field string --fieldName verificationCode --notNull 1
+field string --fieldName contactNumber --notNull 1
+field boolean --fieldName enabled --notNull 1
+field boolean --fieldName verified --notNull 1
+field string --fieldName password --notNull 1
+entity jpa --class ~.domain.TaskDetail --testAutomatically 
+field string --fieldName taskName --notNull 1
+field reference --fieldName assignTo --type ~.domain.UserDetail
+// [failed] field reference --fieldName assignTo --type ~.domain.UserDetail --notNull 1
+field reference --fieldName assignTo --type ~.domain.UserDetail --notNull 1
+field reference --fieldName assignBy --type ~.domain.UserDetail --notNull 1
+field date --fieldName assignDate --type java.util.Date --notNull 1
+field date --fieldName endDate --type java.util.Date --notNull 1
+field number --fieldName rootTaskId --type java.math.BigInteger --notNull 1
+finder list
+finder add --finderName findTaskDetailsByAssignBy
+finder add --finderName findTaskDetailsByAssignTo
+web mvc setup
+json all 
+web mvc json all --package com.taskmanager.web
+web mvc finder all
+focus --class ~.domain.TaskDetail
+web mvc finder all
+finder add --finderName findTaskDetailsByAssignBy
+finder add --finderName findTaskDetailsByAssignTo
+web mvc finder all
+web mvc all --package com.taskmanager.web
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-04-26 00:18:12
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-04-26 00:18:20
+focus --class ~.domain.UserDetail
+finder list 
+finder add --finderName findUserDetailsByEmailIdEquals
+finder add --finderName findUserDetailsByEmailIdEqualsAndPasswordEquals
+finder add --finderName findUserDetailsByVerificationCodeEquals
+web mvc finder all
+field string --fieldName emailId --notNull 1 --unique 
+json all 
+web mvc json all --package com.taskmanager.web
+focus --class ~.domain.TaskDetail
+finder list 
+finder add --finderName findTaskDetailsByAssignBy
+finder add --finderName findTaskDetailsByAssignTo
+web mvc finder all
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-04-26 00:24:35
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-04-26 00:41:23
+focus --class ~.domain.TaskDetail
+field boolean --fieldName taskStatus --notNull 1
+field number --fieldName taskProgress --type int
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-04-27 12:50:36
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-04-27 13:11:46
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-04-27 13:18:14
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-04-28 01:35:35
+focus --class ~.domain.TaskDetail
+finder list 
+finder add --finderName findTaskDetailsByRootTaskId
+web mvc finder all
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-04-28 09:55:49
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-04-28 16:26:08
+focus --class ~.domain.TaskDetail
+finder list 
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-04-28 16:33:45
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-04-29 00:53:14
+focus --class ~.domain.UserDetail
+field string --fieldName roleName
+json all
+web mvc json all --package com.taskmanager.web
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-04-29 00:54:24
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-04-29 17:46:58
+focus --class ~.domain.UserDetail
+finder lis
+finder add --finderName findUserDetailsByEmailIdNotEquals
+web mvc finder all
+json all 
+web mvc json all --package com.taskmanager.web
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-04-29 17:49:57
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-01 11:57:34
+focus --class ~.domain.UserDetail
+field string --fieldName city 
+focus --class ~.domain.TaskDetail
+field string --fieldName taskDescription
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-01 12:02:39
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-02 16:25:33
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-02 16:31:50
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-02 16:36:02
+email sender setup --hostServer smtp.gmail.com --protocol SMTP --port 587 --username kingsharma508@gmail.com --password windowsking
+web mvc all --package com.taskmanager.web
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-02 16:38:35
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-02 22:39:48
+entity jpa --class ~.domain.alertDetail
+field string --fieldName alertTopic
+field reference --fieldName alertTo --type ~.domain.UserDetail
+field reference --fieldName alertBy --type ~.domain.UserDetail
+field string --fieldName alertMessage
+web mvc all --package com.taskmanager.web
+json all
+web mvc json all --package com.taskmanager.web
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-02 22:50:23
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-03 22:28:27
+entity jpa --class ~.domain.projectDetail
+field string --fieldName task
+field string --fieldName type
+field date --fieldName startTime --type java.util.Date
+field date --fieldName endTime --type java.util.Date
+field string --fieldName details
+web mvc all --package com.taskmanager.web
+json all 
+web mvc json all --package com.taskmanager.web
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-03 22:31:15
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-04 23:51:22
+focus --class ~.domain.UserDetail
+finder list
+finder add --finderName findUserDetailsByEnabledNotAndVerifiedNot
+json all 
+web mvc finder all
+web mvc all --package com.taskmanager.web
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-04 23:54:44
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-05 01:54:40
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-07 00:41:55
+focus --class ~.domain.AlertDetail
+field date --fieldName sendingDate --type java.util.Date
+json all 
+web mvc json all --package com.taskmanager.web
+web mvc all --package com.taskmanager.web
+// [failed] finder list --class 
+focus --class ~.domain.AlertDetail
+finder list 
+finder add --finderName findAlertDetailsBySendingDateNotEquals
+web mvc finder all
+json all 
+web mvc json all --package com.taskmanager.web
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-07 00:46:30
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-07 17:08:35
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-07 17:09:45
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-10 11:05:31
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-10 11:05:38
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-12 01:34:07
+focus --class ~.domain.UserDetail
+json all
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-12 01:34:53
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-12 01:45:02
+focus --class ~.domain.UserDetail
+finder list 
+finder add --finderName findUserDetailsByVerificationCodeEquals
+web mvc finder all
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-12 01:47:36
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-12 12:16:38
+focus --class ~.domain.AlertDetail
+finder list
+finder add --finderName findAlertDetailsByAlertTo
+web mvc json all
+json all 
+web mvc all --package com.taskmanager.web
+web mvc json all --package com.taskmanager.web
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-12 12:18:57
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-12 14:59:37
+focus --class ~.domain.AlertDetail
+field boolean --fieldName msgStatus
+json all
+web mvc all --package com.taskmanager.web
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-12 15:00:41
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-12 15:02:13
+focus --class ~.domain.AlertDetail
+finder list
+finder add --finderName findAlertDetailsByMsgStatusNot
+web mvc finder all
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-12 15:03:29
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-12 15:18:13
+focus --class ~.domain.AlertDetail
+finder list
+finder add --finderName findAlertDetailsByAlertToAndMsgStatusNot
+json all
+web mvc all --package com.taskmanager.web
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-12 15:19:21
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-25 19:06:05
+focus --class ~.domain.UserDetail
+finder list
+finder add --finderName findUserDetailsByEmailIdEqualsAndVerifiedNot
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-25 19:07:34
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-26 16:09:36
+focus --class ~.domain.UserDetail
+finder list
+finder add --finderName findUserDetailsByEmailIdNotEqualsAndRoleNameNotEquals
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-26 16:12:45
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-26 16:30:07
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-26 16:31:11
+focus --class ~.domain.UserDetail
+finder list
+finder add --finderName findUserDetailsByEmailIdEqualsAndRoleNameNotEqualsAndVerifiedNotAndEnabledNot
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-26 16:32:55
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-05-26 16:35:31
+focus --class ~.domain.UserDetail
+finder list 
+finder add --finderName findUserDetailsByEmailIdNotEqualsAndVerifiedNotAndEnabledNotAndRoleNameNotEquals
+quit
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-26 16:37:34

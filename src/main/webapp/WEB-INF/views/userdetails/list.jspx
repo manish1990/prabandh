@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_taskmanager_domain_UserDetail" items="${userdetails}" z="EjQmR/Solq6uIsgZiaNgIYje2Lc=">
+        <table:table data="${userdetails}" id="l_com_taskmanager_domain_UserDetail" path="/userdetails" z="XbU4nBqTKdPF7BI6+xlDz4zHJaQ=">
+            <table:column id="c_com_taskmanager_domain_UserDetail_firstName" property="firstName" z="vX5tlFTxnfzJJK0ZFZ5020xzibc="/>
+            <table:column id="c_com_taskmanager_domain_UserDetail_lastName" property="lastName" z="9x2WRzhsoepApFusoSLN8bNNB2I="/>
+            <table:column id="c_com_taskmanager_domain_UserDetail_verificationCode" property="verificationCode" z="Wp77jnAHVRFyAxMWOJwIMTrPsTU="/>
+            <table:column id="c_com_taskmanager_domain_UserDetail_contactNumber" property="contactNumber" z="syJEgnt5Dw6YTjiX1tVZFW3QPqY="/>
+            <table:column id="c_com_taskmanager_domain_UserDetail_enabled" property="enabled" z="J681ipo+KZ0ihonvxJN5MAU7L0I="/>
+            <table:column id="c_com_taskmanager_domain_UserDetail_verified" property="verified" z="WZ0cmERzkHpuyhCdfFmzPIFc+FM="/>
+        </table:table>
+    </page:list>
+</div>

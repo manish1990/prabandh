@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_taskmanager_domain_ProjectDetail" modelAttribute="projectDetail" path="/projectdetails" render="${empty dependencies}" z="cIl6Y4w/dAhCyMDFWi6uyBkcdvw=">
+        <field:input field="task" id="c_com_taskmanager_domain_ProjectDetail_task" z="ALdDDBaWpt2TXJYHmQmVnId8rIM="/>
+        <field:input field="type" id="c_com_taskmanager_domain_ProjectDetail_type" z="JpO0+rGRbJDvy2HIeK/bL5ob6gk="/>
+        <field:datetime dateTimePattern="${projectDetail_starttime_date_format}" field="startTime" id="c_com_taskmanager_domain_ProjectDetail_startTime" z="NOPDkV8RW+Gt1RswJ2m2N4Pw+ts="/>
+        <field:datetime dateTimePattern="${projectDetail_endtime_date_format}" field="endTime" id="c_com_taskmanager_domain_ProjectDetail_endTime" z="i5FkDnsPIKsxsvMn+GITycQatVs="/>
+        <field:input field="details" id="c_com_taskmanager_domain_ProjectDetail_details" z="sDlaUoo8a87oi1DMragesScb6UA="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_taskmanager_domain_ProjectDetail" render="${not empty dependencies}" z="Xwp7kPJCJzD0um9wm1Ta4iGR/UI="/>
+</div>

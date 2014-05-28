@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_taskmanager_domain_TaskDetail" object="${taskdetail}" path="/taskdetails" z="G5qC9ge2wvWPsvLlcApSoPWkJn8=">
+        <field:display field="taskName" id="s_com_taskmanager_domain_TaskDetail_taskName" object="${taskdetail}" z="CmyElFtzxlzh7Tk9RHVUeC+F0Yc="/>
+        <field:display field="assignTo" id="s_com_taskmanager_domain_TaskDetail_assignTo" object="${taskdetail}" z="k0yP8DV51FCiIbVkx1zdbwMimrk="/>
+        <field:display field="assignBy" id="s_com_taskmanager_domain_TaskDetail_assignBy" object="${taskdetail}" z="doLnpBFtmFcl07GrvmPEglO66Bo="/>
+        <field:display date="true" dateTimePattern="${taskDetail_assigndate_date_format}" field="assignDate" id="s_com_taskmanager_domain_TaskDetail_assignDate" object="${taskdetail}" z="GN5eb1N0VtpbrHVcTSkrX1X3dzM="/>
+        <field:display date="true" dateTimePattern="${taskDetail_enddate_date_format}" field="endDate" id="s_com_taskmanager_domain_TaskDetail_endDate" object="${taskdetail}" z="vC9DXBTY49BWk+tEh8GX5wKYBBk="/>
+        <field:display field="rootTaskId" id="s_com_taskmanager_domain_TaskDetail_rootTaskId" object="${taskdetail}" z="7BN5oin6wvl6R9t+T/++4zWYjpI="/>
+        <field:display field="taskStatus" id="s_com_taskmanager_domain_TaskDetail_taskStatus" object="${taskdetail}" z="numuQKYosctdD78mUfrMzpJpMkg="/>
+        <field:display field="taskProgress" id="s_com_taskmanager_domain_TaskDetail_taskProgress" object="${taskdetail}" z="3tzleWTItqzaBXrMJTYSBKH8lEc="/>
+        <field:display field="taskDescription" id="s_com_taskmanager_domain_TaskDetail_taskDescription" object="${taskdetail}" z="nGwHRw/iKJDVHy+LvQAuCs2ThQM="/>
+    </page:show>
+</div>

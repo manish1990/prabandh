@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_taskmanager_domain_TaskDetail" modelAttribute="taskDetail" path="/taskdetails" versionField="Version" z="/X8/6nGAG9oE0/BaolwbVCq0Xdw=">
+        <field:input field="taskName" id="c_com_taskmanager_domain_TaskDetail_taskName" required="true" z="dooGLvTrZiNpGBm9Eq25vPx0ZRY="/>
+        <field:select field="assignTo" id="c_com_taskmanager_domain_TaskDetail_assignTo" itemValue="id" items="${userdetails}" path="/userdetails" required="true" z="GjuUb92inOHgu8UlMKbxWPV6I0w="/>
+        <field:select field="assignBy" id="c_com_taskmanager_domain_TaskDetail_assignBy" itemValue="id" items="${userdetails}" path="/userdetails" required="true" z="ZgpzwdHQlRJI/Ym14Fv6OqujPps="/>
+        <field:datetime dateTimePattern="${taskDetail_assigndate_date_format}" field="assignDate" id="c_com_taskmanager_domain_TaskDetail_assignDate" required="true" z="hku2LZVKW9ZBdLWkW0OaW18ja7Y="/>
+        <field:datetime dateTimePattern="${taskDetail_enddate_date_format}" field="endDate" id="c_com_taskmanager_domain_TaskDetail_endDate" required="true" z="dLcaCK6luzW+FB9JiQqvorvFXhA="/>
+        <field:input field="rootTaskId" id="c_com_taskmanager_domain_TaskDetail_rootTaskId" required="true" validationMessageCode="field_invalid_integer" z="tmolJnU73pekCaIelHoQ8OfzDFQ="/>
+        <field:checkbox field="taskStatus" id="c_com_taskmanager_domain_TaskDetail_taskStatus" z="8BtrqzMWvl5K/TLuYSL3gyl52dc="/>
+        <field:input field="taskProgress" id="c_com_taskmanager_domain_TaskDetail_taskProgress" z="CQhZVzB/NUylCV4TH7eQCm4LFMs="/>
+        <field:input field="taskDescription" id="c_com_taskmanager_domain_TaskDetail_taskDescription" z="r75ELyHnCMwSYjbmAia1wa1Udqw="/>
+    </form:update>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_taskmanager_domain_AlertDetail" items="${alertdetails}" z="ICXq+ww1R0m9Jo1QM0cMEj4WWIU=">
+        <table:table data="${alertdetails}" id="l_com_taskmanager_domain_AlertDetail" path="/alertdetails" z="v7Rw6mOYRG8XJHTcAnbltch3gt0=">
+            <table:column id="c_com_taskmanager_domain_AlertDetail_alertTopic" property="alertTopic" z="lDxOaDm/+1ALw3fDC+s3YGJA1ro="/>
+            <table:column id="c_com_taskmanager_domain_AlertDetail_alertTo" property="alertTo" z="I/GeUCuxeBEWnT61GgRjfI60sz8="/>
+            <table:column id="c_com_taskmanager_domain_AlertDetail_alertBy" property="alertBy" z="u7V1ic4TJiv7A/RJMY+O/pugbU8="/>
+            <table:column id="c_com_taskmanager_domain_AlertDetail_alertMessage" property="alertMessage" z="hLa7u1eoJklDSF2KgwWubLb3l7Q="/>
+            <table:column date="true" dateTimePattern="${alertDetail_sendingdate_date_format}" id="c_com_taskmanager_domain_AlertDetail_sendingDate" property="sendingDate" z="T3Eile0J/Ic/CojBc0frrjO/Cjg="/>
+            <table:column id="c_com_taskmanager_domain_AlertDetail_msgStatus" property="msgStatus" z="OPkIkHmqqQUwxR4nsMLIHkXF0Ns="/>
+        </table:table>
+    </page:list>
+</div>

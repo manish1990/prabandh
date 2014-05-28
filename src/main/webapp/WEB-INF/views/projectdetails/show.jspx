@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_taskmanager_domain_ProjectDetail" object="${projectdetail}" path="/projectdetails" z="m+GMEaZ/h/mFdTbK66GzCeJp6G4=">
+        <field:display field="task" id="s_com_taskmanager_domain_ProjectDetail_task" object="${projectdetail}" z="jADTAiwA8EbZTeU7rclLqDfKoOo="/>
+        <field:display field="type" id="s_com_taskmanager_domain_ProjectDetail_type" object="${projectdetail}" z="SyEqTghCX+FkoRf1A97LLW9JZ+8="/>
+        <field:display date="true" dateTimePattern="${projectDetail_starttime_date_format}" field="startTime" id="s_com_taskmanager_domain_ProjectDetail_startTime" object="${projectdetail}" z="FJppcEx74cxfGXLcfcFgEl3/gg4="/>
+        <field:display date="true" dateTimePattern="${projectDetail_endtime_date_format}" field="endTime" id="s_com_taskmanager_domain_ProjectDetail_endTime" object="${projectdetail}" z="VZFdKCnkIAdfo031mH1H5TUCEsM="/>
+        <field:display field="details" id="s_com_taskmanager_domain_ProjectDetail_details" object="${projectdetail}" z="CS0DOohBc0IuWMvOs6l6BkXOwAQ="/>
+    </page:show>
+</div>

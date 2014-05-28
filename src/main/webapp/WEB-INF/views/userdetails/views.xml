@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="userdetails/list">
+        <put-attribute name="body" value="/WEB-INF/views/userdetails/list.jspx"/>
+    </definition>
+<definition extends="default" name="userdetails/show">
+        <put-attribute name="body" value="/WEB-INF/views/userdetails/show.jspx"/>
+    </definition>
+<definition extends="default" name="userdetails/create">
+        <put-attribute name="body" value="/WEB-INF/views/userdetails/create.jspx"/>
+    </definition>
+<definition extends="default" name="userdetails/update">
+        <put-attribute name="body" value="/WEB-INF/views/userdetails/update.jspx"/>
+    </definition>
+<definition extends="default" name="userdetails/findUserDetailsByEmailIdEquals">
+        <put-attribute name="body" value="/WEB-INF/views/userdetails/findUserDetailsByEmailIdEquals.jspx"/>
+    </definition>
+<definition extends="default" name="userdetails/findUserDetailsByEmailIdEqualsAndPasswordEquals">
+        <put-attribute name="body" value="/WEB-INF/views/userdetails/findUserDetailsByEmailIdEqualsAndPasswordEquals.jspx"/>
+    </definition>
+<definition extends="default" name="userdetails/findUserDetailsByVerificationCodeEquals">
+        <put-attribute name="body" value="/WEB-INF/views/userdetails/findUserDetailsByVerificationCodeEquals.jspx"/>
+    </definition>
+<definition extends="default" name="userdetails/findUserDetailsByEmailIdNotEquals">
+        <put-attribute name="body" value="/WEB-INF/views/userdetails/findUserDetailsByEmailIdNotEquals.jspx"/>
+    </definition>
+<definition extends="default" name="userdetails/findUserDetailsByEnabledNotAndVerifiedNot">
+        <put-attribute name="body" value="/WEB-INF/views/userdetails/findUserDetailsByEnabledNotAndVerifiedNot.jspx"/>
+    </definition>
+<definition extends="default" name="userdetails/findUserDetailsByEmailIdEqualsAndVerifiedNot">
+        <put-attribute name="body" value="/WEB-INF/views/userdetails/findUserDetailsByEmailIdEqualsAndVerifiedNot.jspx"/>
+    </definition>
+<definition extends="default" name="userdetails/findUserDetailsByEmailIdNotEqualsAndRoleNameNotEquals">
+        <put-attribute name="body" value="/WEB-INF/views/userdetails/findUserDetailsByEmailIdNotEqualsAndRoleNameNotEquals.jspx"/>
+    </definition>
+<definition extends="default" name="userdetails/findUserDetailsByEmailIdEqualsAndRoleNameNotEqualsAndVerifiedNotAndEnabledNot">
+        <put-attribute name="body" value="/WEB-INF/views/userdetails/findUserDetailsByEmailIdEqualsAndRoleNameNotEqualsAndVerifiedNotAndEnabledNot.jspx"/>
+    </definition>
+<definition extends="default" name="userdetails/findUserDetailsByEmailIdNotEqualsAndVerifiedNotAndEnabledNotAndRoleNameNotEquals">
+        <put-attribute name="body" value="/WEB-INF/views/userdetails/findUserDetailsByEmailIdNotEqualsAndVerifiedNotAndEnabledNotAndRoleNameNotEquals.jspx"/>
+    </definition>
+</tiles-definitions>

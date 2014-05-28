@@ -1,0 +1,234 @@
+<div class="container-fluid">
+	<div id="navbar">
+		<div class="container-fluid">
+			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#bs-navbar-collapse-1" style="color: white">
+						<i class="fa fa-sign-in"></i>Sign in
+					</button>
+					<p class="label col-sm-3 white"
+						style="margin-left: 10px; margin-top: 10px; font-size: 20px">Prabandh</p>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+					<ul style="margin-top: 8px" class="nav navbar-nav navbar-right">
+						<li style="margin-left: 8px; margin-top: 5px"><input
+							id="login-username" type="text" ng-model="username"
+							class="form-control" name="username" value=""
+							placeholder="enter email" autofocus="autofocus" required></li>
+						<li style="margin-left: 8px; margin-top: 5px"><input
+							id="login-password" type="password" class="form-control"
+							name="password" ng-model="password" placeholder="password"
+							required></li>
+						<li style="margin-right: 40px; margin-left: 10px; margin-top: 5px">
+							<button class="btn btn-primary btn-sm" ng-click="login()">
+								Login <span class="glyphicon glyphicon-log-in"></span>
+							</button>
+						</li>
+							<li style="margin-right: 50px; margin-left: 20px;"><div
+									class="row small">
+									<a data-toggle="modal" data-target="#ResetPasswordForm"
+										class="btn btn-link">Can't access your account ? </a>
+								</div></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+</div>
+<div class="container-fluid" style="margin-top: 10px" style="background:url('./img/professional.jpg');">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-4" ng-controller="regController">
+			<form class="form-horizontal" name="rgstfrm" ng-submit=signUp()>
+				<fieldset>
+					<!-- Form Name -->
+					<legend class="bg-info col-md-offset-2 text-center">Registration</legend>
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="txtFirstName">First
+							Name</label>
+						<div class="col-md-5">
+							<input id="txtFirstName" name="txtFirstName" type="text"
+								placeholder="Enter your first name" ng-model="user.firstName"
+								class="form-control input-md" required="required"
+								ng-pattern='/^[a-zA-Z]+$/' ng-maxlength="15">
+							<p ng-show="rgstfrm.txtFirstName.$error.maxlength"
+								class="help-block" style="color: red">too long first name</p>
+							<p
+								ng-show="rgstfrm.txtFirstName.$invalid &&!rgstfrm.txtFirstName.$pristine"
+								class="help-block" style="color: red">input only alphabte.</p>
+						</div>
+					</div>
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="txtLastName">Last
+							Name</label>
+						<div class="col-md-5">
+							<input id="txtLastName" name="txtLastName" type="text"
+								ng-model="user.lastName" placeholder="Enter your last name"
+								class="form-control input-md" ng-maxlength="15"
+								ng-pattern='/^[a-zA-Z]+$/'>
+							<p ng-show="rgstfrm.txtLastName.$error.maxlength"
+								class="help-block" style="color: red">too long last name</p>
+							<p
+								ng-show="rgstfrm.txtLastName.$invalid &&!rgstfrm.txtLastName.$pristine"
+								class="help-block" style="color: red">input only alphabte.</p>
+						</div>
+					</div>
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="txtEmailId">Email
+							id</label>
+						<div class="col-md-5">
+							<input id="txtEmailId" name="txtEmailId" type="email"
+								ng-model="user.emailId" ng-blur="checkMail(user.emailId)"
+								placeholder="Enter your email id" class="form-control input-md"
+								required=""
+								ng-pattern='/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/'>
+							<span class="help-block">exmple:name@domain.com</span>
+							<p
+								ng-show="!duplicate&&rgstfrm.txtEmailId.$invalid && !rgstfrm.txtEmailId.$pristine"
+								class="help-block" style="color: red">Enter a valid email.</p>
+							<p ng-show="duplicate" class="help-block" style="color: red">Email
+								already exist.</p>
+						</div>
+					</div>
+					<!-- Password input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="txtPassword">Password</label>
+						<div class="col-md-5">
+							<input id="txtPassword" name="txtPassword" type="password"
+								ng-model="user.password" placeholder="Enter password"
+								class="form-control input-md" required="required"
+								ng-minlength="8"
+								ng-pattern='/^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d\W]).*$/'>
+							<p
+								ng-show="!duplicate&&rgstfrm.txtPassword.$invalid && !rgstfrm.txtPassword.$pristine"
+								class="help-block" style="color: red">contain atleast upper
+								letter and symbol and number.</p>
+							<p ng-show="rgstfrm.txtPassword.$error.minlength"
+								class="help-block" style="color: red">password is too short.</p>
+						</div>
+					</div>
+					<!-- text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="contact">Contact
+							Number</label>
+						<div class="col-md-5">
+							<input id="contact" name="contact" type="text"
+								placeholder="Enter contact number" class="form-control input-md"
+								required="required" ng-model="user.contactNumber"
+								ng-pattern='/^[0-9]*$/' ng-minlength="10" ng-maxlength="10" />
+							<p ng-show="rgstfrm.contact.$error.minlength" class="help-block"
+								style="color: red">too short contact number.</p>
+							<p ng-show="rgstfrm.contact.$error.maxlength" class="help-block"
+								style="color: red">too long contact number.</p>
+							<p
+								ng-show="rgstfrm.contact.$invalid &&!rgstfrm.contact.$pristine"
+								class="help-block" style="color: red">wrong contact number.</p>
+						</div>
+
+					</div>
+
+					<!-- text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="city">City</label>
+						<div class="col-md-5">
+							<input id="city" name="city" type="text" placeholder="Enter city"
+								class="form-control input-md" required="required"
+								ng-model="user.city" ng-pattern='/^[a-zA-Z]+$/'
+								ng-maxlength="15">
+							<p ng-show="rgstfrm.city.$error.maxlength" class="help-block"
+								style="color: red">too long city name.</p>
+							<p ng-show="rgstfrm.city.$invalid &&!rgstfrm.city.$pristine"
+								class="help-block" style="color: red">input only alphabte.</p>
+						</div>
+					</div>
+
+					<input type="hidden" name="enabled" ng-model="user.enabled" /> <input
+						type="hidden" name="verificationcode"
+						ng-model="user.verificationCode" /> <input type="hidden"
+						name="version" ng-model="user.version" /> <input type="hidden"
+						name="role" ng-model="user.roleName" /> <input type="hidden"
+						name="verified" ng-model="user.verified" /> <input type="hidden"
+						name="role" ng-model="user.roleName" />
+
+					<!-- ng-disabled="rgstfrm.$invalid"  -->
+					<div class="form-group">
+						<label class="col-md-4 control-label" for="addBtn"></label>
+						<div class="col-md-8">
+							<button type="submit" id="done" class="btn btn-primary"
+								ng-disabled="rgstfrm.$invalid">
+								<i class="glyphicon glyphicon-user"></i> Register
+							</button>
+							<button type="reset" id="cancel" class="btn btn-info">
+								<i class="glyphicon glyphicon-remove"></i> Cancel
+							</button>
+							<!-- 							<button style="width: auto" id="addBtn" name="addBtn"
+								ng-click="signUp()" class="btn btn-primary">
+								<i class="glyphicon glyphicon-user"></i> Register
+							</button>
+							<button style="width: auto" id="clearBtn" name="clearBtn"
+								class="btn btn-danger" ng-click="cancelsignup()">
+								<i class="glyphicon glyphicon-remove"></i> Cancel -->
+							</button>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- Forgot password model -->
+<div class="modal fade bs-example-modal-sm" id="ResetPasswordForm"
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog">
+		<form class="form-horizontal" name="fgtPwdfrm"
+			ng-submit="forgotPassword()">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">{{headerText}}</h4>
+				</div>
+				<div class="modal-body" style="text-align: center;"
+					ng-show="showModelBody">
+					<div class="input-group" style="margin-bottom: 15px;">
+						<span class="input-group-addon"><span
+							class="glyphicon glyphicon-envelope"></span> </span> <input
+							id="txtEmailId" name="txtEmailId" type="text"
+							ng-model="fgtPwdfrm.EMailId" placeholder="Enter your email id"
+							class="form-control input-md" required title="Enter Email Id"
+							ng-pattern='/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/'>
+
+					</div>
+					<p
+						ng-show="!notExist&&fgtPwdfrm.txtEmailId.$invalid && !fgtPwdfrm.txtEmailId.$pristine"
+						class="help-block" style="color: red">Enter a valid email.</p>
+					<p ng-show="notExist" class="help-block" style="color: red">Entered
+						email is not exist.</p>
+					<div style="margin-top: 12px"></div>
+				</div>
+				<div class="modal-footer" ng-show="showModelFooter">
+					<button type="reset" id="resetButton" class="btn btn-danger"
+						data-dismiss="modal">Cancel</button>
+					<button type="submit" class="btn btn-primary btn-sm">Submit</button>
+				</div>
+				<div class="modal-body" ng-show="showProgress">
+					<div class="progress progress-striped active">
+						<div class="progress-bar progress-bar-success" role="progressbar"
+							aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"
+							style="width: 100%">
+							<span class="sr-only">100% Complete</span>
+						</div>
+					</div>
+				</div>
+				<div class="modal-body" ng-show="showMessage">
+				<div class="alert alert-success">{{txtMessage}}</div>
+				</div>
+			</div>
+		</form>
+
+	</div>
+</div>
+</div>

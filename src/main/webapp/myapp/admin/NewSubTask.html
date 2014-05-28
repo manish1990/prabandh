@@ -1,0 +1,286 @@
+
+<div id="wrapper">
+
+	<!-- Sidebar -->
+
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#/admintasks">Prabandh</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav side-nav">
+				<li class="active"><a href="#/admintasks"><i class="fa fa-dashboard"></i>
+						Prabandh</a></li>
+				<li><a href="#/admintasks"><i class="fa fa-tasks"></i> tasks</a></li>
+				<!-- <li><a href="#/newtask"><i class="fa fa-plus"></i> new tasks</a></li> -->
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">
+				<i class="fa fa-bar-chart-o"></i> Charts<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#/viewadminchart">Project Chart</a></li>
+						<li><a href="#/viewadminganttchart">Gantt Chart</a></li>
+						<li><a href="#/adminganttchart1">new Gantt Chart</a></li>
+					</ul>
+				</li>
+				<li><a href="#/adminuserlist"><i class="fa fa-users"></i> User</a></li>
+				<li class="dropdown"><a class="dropdown-toggle"	data-toggle="dropdown">
+				<i class="fa fa-envelope"></i> Compose Mail<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#/adminsinglemail">Send To Individual</a></li>
+						<li><a href="#/adminmailtoall">Send To All</a></li>
+					</ul>
+				</li>
+				<li><a href="#/adminuserdetail/{{loginusrid}}"><i class="fa fa-user"></i> profile</a></li>
+				<li><a href="#"><i class="fa fa-desktop"></i> About Us</a></li>
+
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right navbar-user">
+	<!-- 			<li class="dropdown messages-dropdown"><a href="#"
+					class="dropdown-toggle" data-toggle="dropdown"><i
+						class="fa fa-envelope"></i> Messages <span class="badge">7</span>
+						<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li class="dropdown-header">7 New Messages</li>
+						<li class="message-preview"><a href="#"> <span
+								class="avatar"><img src="http://placehold.it/50x50"></span>
+								<span class="name">John Smith:</span> <span class="message">Hey
+									there, I wanted to ask you something...</span> <span class="time"><i
+									class="fa fa-clock-o"></i> 4:34 PM</span>
+						</a></li>
+						<li class="divider"></li>
+						<li class="message-preview"><a href="#"> <span
+								class="avatar"><img src="http://placehold.it/50x50"></span>
+								<span class="name">John Smith:</span> <span class="message">Hey
+									there, I wanted to ask you something...</span> <span class="time"><i
+									class="fa fa-clock-o"></i> 4:34 PM</span>
+						</a></li>
+						<li class="divider"></li>
+						<li class="message-preview"><a href="#"> <span
+								class="avatar"><img src="http://placehold.it/50x50"></span>
+								<span class="name">John Smith:</span> <span class="message">Hey
+									there, I wanted to ask you something...</span> <span class="time"><i
+									class="fa fa-clock-o"></i> 4:34 PM</span>
+						</a></li>
+						<li class="divider"></li>
+						<li><a href="#">View Inbox <span class="badge">7</span></a></li>
+					</ul></li>
+				<li class="dropdown alerts-dropdown"><a href="#"
+					class="dropdown-toggle" data-toggle="dropdown"><i
+						class="fa fa-bell"></i> Alerts <span class="badge">3</span> <b
+						class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Default <span class="label label-default">Default</span></a></li>
+						<li><a href="#">Primary <span class="label label-primary">Primary</span></a></li>
+						<li><a href="#">Success <span class="label label-success">Success</span></a></li>
+						<li><a href="#">Info <span class="label label-info">Info</span></a></li>
+						<li><a href="#">Warning <span class="label label-warning">Warning</span></a></li>
+						<li><a href="#">Danger <span class="label label-danger">Danger</span></a></li>
+						<li class="divider"></li>
+						<li><a href="#">View All</a></li>
+					</ul></li> -->
+				<li class="dropdown user-dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown"><i class="fa fa-user"></i>{{loginusrname}}<b
+						class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#/adminuserdetail/{{loginusrid}}"><i class="fa fa-user"></i> Profile</a></li>
+						<li><a href="#"><i class="fa fa-envelope"></i>{{loginusrmail}}<span
+								class="badge">7</span></a></li>
+						<li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+						<li class="divider"></li>
+						<li><a ng-click="logout()"><i class="fa fa-power-off"></i>
+								Log Out</a></li>
+					</ul></li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</nav>
+
+
+	<div id="page-wrapper">
+		<div class="row" style="margin-top: -20px">
+			<div class="col-lg-12">
+				<h1>
+					New Task<small>Statistics Overview</small>
+				</h1>
+				<ol class="breadcrumb">
+					<li class="active"><i class="fa fa-dashboard"></i> Prabandh</li>
+				</ol>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="col-md-5">
+				<form name="newsubtask" class="form-horizontal"
+					ng-submit="createsubtask()">
+					<fieldset>
+
+						<!-- Form Name -->
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-5 control-label" for="task_name">Task
+								Name</label>
+							<div class="col-md-7">
+								<input id="task_name" name="task_name" type="text"
+									placeholder="" class="form-control input-md" required=""
+									ng-model="task.taskName" ng-pattern='/^[a-zA-Z\s]+$/'
+									ng-maxlength="20">
+								<p ng-show="newsubtask.task_name.$error.maxlength"
+									class="help-block" style="color: red">too long task name</p>
+								<p
+									ng-show="newsubtask.task_name.$invalid &&!newsubtask.task_name.$pristine"
+									class="help-block" style="color: red">input only alphabte.</p>
+
+							</div>
+						</div>
+
+						<!-- Textarea -->
+						<div class="form-group">
+							<label class="col-md-5 control-label" for="taskdescription">Task
+								Description</label>
+							<div class="col-md-7">
+								<textarea class="form-control" id="taskdescription"
+									ng-model="task.taskDescription" name="taskdescription"
+									required=""></textarea>
+							</div>
+						</div>
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-5 control-label" for="assign_date">Assign
+								Date</label>
+							<div class="col-md-7">
+								<input id="assign_date" name="assign_date" type="text"
+									placeholder="" class="form-control input-md" required=""
+									ng-model="task.assignDate" readonly>
+							</div>
+						</div>
+
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-5 control-label" for="assing_to">Assign
+								To</label>
+							<div class="col-md-7">
+								<!-- <input id="assing_to" name="assing_to" type="text" placeholder="" class="form-control input-md" required="" ng-options="">-->
+								<!-- <div angucomplete id="ex1" placeholder="Search User" pause="100" selectedobject="selectedCountry" localdata="subusers" searchfields="firstName" titlefield="firstName" minlength="1" inputclass="form-control form-control-small" ng-model="task.assignTo"/> -->
+								<select id="assign_to" name="assign_to" class="form-control"
+									ng-options="assignTo.firstName+' '+assignTo.lastName for assignTo in subusers"
+									ng-model="task.assignTo">
+									<option value="">==== select subordinate ===</option>
+								</select>
+
+							</div>
+						</div>
+
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-5 control-label" for="assign_by">Assign
+								By</label>
+							<div class="col-md-7">
+								<input id="assign_by" name="assign_by" type="text"
+									placeholder="" class="form-control input-md" required=""
+									ng-model="task.assignBy" readonly>
+							</div>
+						</div>
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-5 control-label" for="roo_task_id">Root
+								Task</label>
+							<div class="col-md-7">
+								<input id="roo_task_id" name="roo_task_id" type="text"
+									placeholder="" class="form-control input-md" required=""
+									ng-model="task.rootTaskId" readonly>
+
+							</div>
+						</div>
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-5 control-label" for="dead_line">Dead
+								Line</label>
+							<div class="col-md-7">
+								<input id="dead_line" name="dead_line" type="text"
+									placeholder="" class="form-control input-md" required=""
+									ng-model="task.endDate" readonly>
+							</div>
+						</div>
+<!-- 						<script>
+							$(document).ready(
+
+							/* This is the function that will get executed after the DOM is fully loaded */
+							function() {
+								$("#dead_line").datepicker({
+									changeMonth : true,//this option for allowing user to select month
+									changeYear : true
+								//this option for allowing user to select from year range
+								});
+							}
+
+							);
+							
+						</script> -->
+						
+						<script type="text/javascript">
+							$(function() {
+								var date = new Date();
+								var currentMonth = date.getMonth();
+								var currentDate = date.getDate();
+								var currentYear = date.getFullYear();
+								$('#dead_line').datepicker(
+										{
+											minDate :1
+										});
+							});
+							$(document).ready(
+
+									/* This is the function that will get executed after the DOM is fully loaded */
+									function() {
+										$("#dead_line").datepicker({
+											changeMonth : true,//this option for allowing user to select month
+											changeYear : true
+										//this option for allowing user to select from year range
+										});
+									}
+
+									);
+						</script>
+
+						<!-- Text input-->
+
+						<input id="progress" name="progress" type="hidden" placeholder=""
+							class="form-control input-md" required=""
+							ng-model="task.taskProgress" readonly> <input id="status"
+							name="status" type="hidden" placeholder=""
+							class="form-control input-md" required=""
+							ng-model="task.taskStatus">
+
+
+						<!-- Button (Double) -->
+						<div class="form-group">
+							<label class="col-md-6 control-label" for="assign"></label>
+							<div class="col-md-6">
+								<button id="assign" type="submit" name="assign"
+									class="btn btn-success">Assign</button>
+								<button id="cancel" ng-click="cancelsubtask()" name="cancel"
+									class="btn btn-primary">Cancel</button>
+							</div>
+						</div>
+
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</idv>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_taskmanager_domain_TaskDetail" items="${taskdetails}" z="VcESZP81NMzwRo0wTcUOuE1txw0=">
+        <table:table data="${taskdetails}" id="l_com_taskmanager_domain_TaskDetail" path="/taskdetails" z="e8xySHAThyWmFlkYI7v/7e3EOk4=">
+            <table:column id="c_com_taskmanager_domain_TaskDetail_taskName" property="taskName" z="bwbOL+RUSGKFDSlUvrtNQ1a3nDo="/>
+            <table:column id="c_com_taskmanager_domain_TaskDetail_assignTo" property="assignTo" z="PTZpukapGbwfo+W1tr3UiJPgLBc="/>
+            <table:column id="c_com_taskmanager_domain_TaskDetail_assignBy" property="assignBy" z="jwzIHZkBMNLwo4CwJ33EUpeiGnA="/>
+            <table:column date="true" dateTimePattern="${taskDetail_assigndate_date_format}" id="c_com_taskmanager_domain_TaskDetail_assignDate" property="assignDate" z="m9xXDCCyGIHhr2V4JJLn+USO+38="/>
+            <table:column date="true" dateTimePattern="${taskDetail_enddate_date_format}" id="c_com_taskmanager_domain_TaskDetail_endDate" property="endDate" z="WeTaq8IBHA8p4/6rJNck+ltkzpQ="/>
+            <table:column id="c_com_taskmanager_domain_TaskDetail_rootTaskId" property="rootTaskId" z="gxCUdWL0yN0bm1W0swnaY65fFXI="/>
+        </table:table>
+    </page:list>
+</div>
